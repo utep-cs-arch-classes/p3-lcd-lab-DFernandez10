@@ -15,11 +15,14 @@ void initSpiderValues(void)
 
 void updateSpiderPos(void)
 {
-    if(sp.pos_x < screenWidth)
+    if(sp.pos_x < (screenWidth - 29))
 {
-   sp.pos_x += 30; //Update the x position
-   fillRectangle(sp.pos_y, sp.pos_x, 29, 19, COLOR_LIGHT_BLUE); //Delete old drawing
-   drawSprite(29, 19, 0,0, spiderman_idle);
+   int old_x = sp.pos_x;
+   //drawSprite(29,19,0,sp.pos_x,spiderman_idle);
+   fillRectangle(old_x, sp.pos_y, 19, 29, COLOR_LIGHT_BLUE); //Delete old drawing
+   sp.pos_x += 20;
+   drawSprite(29,19,0,sp.pos_x,spiderman_idle);
+
 }
 
 } 

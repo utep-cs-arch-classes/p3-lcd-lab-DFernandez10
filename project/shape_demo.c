@@ -3,7 +3,7 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 //#include "switches.h"
-#include "led.h"
+//#include "led.h"
 #include "draw_shapes.h"
 
 // WARNING: LCD DISPLAY USES P1.0.  Do not touch!!! 
@@ -13,7 +13,7 @@ int state = 0;
 
 void main()
 {
-    initSpiderValues();
+  initSpiderValues();
   configureClocks();
   lcd_init();
   //switch_p2_init();
@@ -25,7 +25,7 @@ void main()
 //drawSprite(29,19, 1, 1, spiderman_idle);
 //drawSprite(28,21, 1, 21, web_idle);
 
-  or_sr(0x18);   
+  or_sr(0x18);
 
   //Guess I will have to make an individual function for this
-} 
+}
